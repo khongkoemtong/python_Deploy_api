@@ -1,9 +1,11 @@
 from flask import Flask,jsonify,request
 import pymysql
 import os
+from flask_cors import CORS  # <--- ថែមជួរនេះ
 
 
 app = Flask(__name__)
+CORS(app)  # <--- ថែមជួរនេះ (វានឹងអនុញ្ញាតឱ្យគ្រប់វេបសាយទាញទិន្នន័យបាន)
 
 
 UPLOAD_FOLDER = 'static/uploads'
